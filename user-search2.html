@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>EOS - text | Dashboard</title>
+    <link rel="icon" href="img/favicon-.webp">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/layout.css" rel="stylesheet">
+    <link href="css/fontawesome.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="display-panel">
+        <div class="left-panel">
+            <div class="top-wrap">
+                <div class="logo-wrap">
+                    <img class="edas-logo img-responsive" src="img/logo.png" alt="logo">
+                </div>
+                <p class="username">Krunal Wankhede</p>
+
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="dashboard.html"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="user-search.html"><i class="fas fa-search"></i> Search Criteria</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="user-list.html"><i class="fas fa-clipboard-list"></i> List</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="right-panel">
+            <div class="header">
+                <span class="pe-3">Friday, July 8, 2022 19:18:17</span>
+                <a class="logout-btn" href="login-page.html"><i class="fas fa-power-off"></i></a>
+            </div>
+            <div class="dashboard-wrap">
+                <div class="container">
+                    <div class="card mt-3">
+                        <h1 class="card-header">
+                            Search Criteria
+                        </h1>
+                        <div class="card-body">
+                            <div class="linkedin mt-2">
+                                <h5 class="card-title"><img src="img/linkedin.png" alt="Linkedin"> Linkedin</h5>
+                            </div>
+                            <div class="row">
+                                <div class="col-xl-6">
+                                    <div class="mt-2 mb-3">
+                                        <input type="text" class="form-control" id="" placeholder="">
+                                      </div>
+                                </div>
+                                <div class="col-xl-6">
+                                    <div class="mt-2 mb-3">
+                                        <input type="text" class="form-control" id="" placeholder="">
+                                      </div>
+                                </div>
+                                <div class="col-xl-6">
+                                    <div class="mt-2 mb-4">
+                                        <input type="text" class="form-control" id="" placeholder="">
+                                      </div>
+                                </div>
+                                <div class="col-xl-6">
+                                    <div class="mt-2 mb-4">
+                                        <input type="text" class="form-control" id="" placeholder="">
+                                      </div>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="zoominfo mt-5">
+                                <h5 class="card-title"><img src="img/zoom_info.png" alt="Linkedin"> Linkedin</h5>
+                            </div>
+                            <div class="row">
+                                <div class="col-xl-6">
+                                    <div class="mt-2 mb-3">
+                                        <input type="text" class="form-control" id="" placeholder="">
+                                      </div>
+                                </div>
+                                <div class="col-xl-6">
+                                    <div class="mt-2 mb-3">
+                                        <input type="text" class="form-control" id="" placeholder="">
+                                      </div>
+                                </div>
+                                <div class="col-xl-6">
+                                    <div class="mt-2 mb-3">
+                                        <input type="text" class="form-control" id="" placeholder="">
+                                      </div>
+                                </div>
+                            </div>
+                            <div class="text-center mt-4 mb-4">
+                                <button class="btn btn-primary"  data-bs-toggle="modal" href="#importData" role="button">Submit</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="modal fade" id="importData" aria-hidden="true" aria-labelledby="importDataLabel"
+        tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <!-- <div class="modal-header">
+                    <h5 class="modal-title" id="importDataLabel">Modal 1</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div> -->
+                <div class="modal-body text-center">
+                    <div class="p-5">
+                        <h3 class="successful-text mb-60px">Successfully Added!</h3>
+                        <h5 class="text-import-data">Please Import Data</h5>
+                        <button class="btn btn-outline-primary" onclick="importData()"><i class="fas fa-upload"></i> Import</button>
+                    </div>
+                </div>
+                <!-- <div class="modal-footer">
+                    <button class="btn btn-primary" data-bs-target="#importData2" data-bs-toggle="modal">Open second
+                        modal</button>
+                </div> -->
+            </div>
+        </div>
+    </div>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script>
+        function importData() {
+            let input = document.createElement('input');
+            input.type = 'file';
+            input.onchange = _ => {
+                // you can use this method to get file and perform respective operations
+                let files = Array.from(input.files);
+                console.log(files);
+            };
+            input.click();
+
+        }
+    </script>
+</body>
+
+</html>
